@@ -37,7 +37,7 @@
         const extra_gravity_points = []
 
         const click = new Audio("s.wav");
-        const sound_is_on = false;
+        const sound_is_on = true;
 
         const growers = [];
     </script>
@@ -100,12 +100,12 @@
                     if (sound_is_on)
                         this.click_play();
 
-                        growers.push(r);
+                    growers.push(r);
                 }             
             }
 
             click_play() {
-                click.play()
+                click.cloneNode(true).play();
             }
         }
     </script>
